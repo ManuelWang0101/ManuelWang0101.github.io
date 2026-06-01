@@ -75,7 +75,7 @@ body::before{
 }
 // tagline under the brand, added without editing the header include
 .site-title::after{
-  content:"Biostatistics · Football decision modeling";
+  content:"Football decision modeling";
   display:block;
   font-family:var(--mono);
   font-weight:400;
