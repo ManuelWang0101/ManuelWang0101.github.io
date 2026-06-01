@@ -1,0 +1,9 @@
+<footer class="site-footer">
+  <p style="display:flex; gap:1.3rem; flex-wrap:wrap; margin:0; font-family:'JetBrains Mono','SF Mono',Menlo,monospace; font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;">
+    <span>&copy; {{ site.time | date: "%Y" }} {{ site.title | escape }}</span>
+    {%- if site.minima.social_links.github -%}
+      <span><a href="https://github.com/{{ site.minima.social_links.github }}">GitHub</a></span>
+    {%- endif -%}
+    <span><a href="{{ '/feed.xml' | relative_url }}">RSS</a></span>
+  </p>
+</footer>
