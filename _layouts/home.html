@@ -1,0 +1,8 @@
+--- layout: default ---
+Research log
+{{ content }}
+Writing
+	•	{%- for post in site.posts -%}
+	•	{{ post.date | date: "%b %-d, %Y" }} {{ post.title | escape }} {%- if post.description -%} {{ post.description | escape }} {%- elsif post.excerpt -%} {{ post.excerpt | strip_html | truncatewords: 20 }} {%- endif -%} →
+	•	{%- endfor -%}
+Subscribe via RSS
