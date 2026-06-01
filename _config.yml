@@ -1,0 +1,29 @@
+title: Mufan Wang
+email:
+description: >-
+  Research notes on football analytics, causal inference, and statistics.
+  Currently building POLARIS — player-conditional decision policies in soccer.
+baseurl: ""
+url: "https://ManuelWang0101.github.io"
+
+theme: minima
+
+# Minima options
+minima:
+  skin: classic
+  social_links:
+    github: ManuelWang0101
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Show post excerpts on the home page
+show_excerpts: true
+
+# Files Jekyll should not copy into the built site
+exclude:
+  - README.md
+  - .gitignore
