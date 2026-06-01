@@ -1,12 +1,41 @@
---- 
-layout: default 
+---
+layout: default
 ---
 
 <div class="home">
-Research log
-{{ content }}
-Writing
-	•	{%- for post in site.posts -%}
-	•	{{ post.date | date: "%b %-d, %Y" }} {{ post.title | escape }} {%- if post.description -%} {{ post.description | escape }} {%- elsif post.excerpt -%} {{ post.excerpt | strip_html | truncatewords: 20 }} {%- endif -%} →
-	•	{%- endfor -%}
-Subscribe via RSS
+
+  <header class="home-hero">
+    <p class="kicker">Research log</p>
+    <div class="home-intro">
+      {{ content }}
+    </div>
+  </header>
+
+  <section class="post-feed">
+    <h2 class="feed-heading">Writing</h2>
+
+    <ul class="post-list">
+      {%- for post in site.posts -%}
+      <li class="post-row">
+        <a class="post-row-link" href="{{ post.url | relative_url }}">
+          <time class="post-row-date" datetime="{{ post.date | date_to_xmlschema }}">
+            {{ post.date | date: "%b %-d, %Y" }}
+          </time>
+          <span class="post-row-main">
+            <span class="post-row-title">{{ post.title | escape }}</span>
+            {%- if post.description -%}
+              <span class="post-row-desc">{{ post.description | escape }}</span>
+            {%- elsif post.excerpt -%}
+              <span class="post-row-desc">{{ post.excerpt | strip_html | truncatewords: 20 }}</span>
+            {%- endif -%}
+          </span>
+          <span class="post-row-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </li>
+      {%- endfor -%}
+    </ul>
+
+    <p class="rss-subscribe">Subscribe <a href="{{ '/feed.xml' | relative_url }}">via RSS</a></p>
+  </section>
+
+</div>
