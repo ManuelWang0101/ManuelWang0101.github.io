@@ -3,4 +3,4 @@ layout: home
 title: Home
 ---
 
-Research notes on football analytics, causal inference, and statistics. Currently building **POLARIS** — player-conditional decision policies in soccer.
+Research notes on football analytics. Currently building **POLARIS** — Player-cOnditional poLicy estimation with Augmented Relational and Individual State.
